@@ -1,3 +1,10 @@
+
+function initMyTemplate() {
+	console.log("Init main.js");
+}
+
+initMyTemplate();
+
 // Initialisation des fonctions
 window.onscroll = function () {
 	checkOnScroll();
@@ -26,12 +33,8 @@ function toggleDropdownNav() {
 
 // Menu mobile
 toggleMenu.addEventListener("click", function () {
+	console.log("on click");
 	toggleDropdownNav();
-});
-
-$("ul#mobile-menu > .menu-item-has-children").click(function (event) {
-	$(".reveal-sub-menu").removeClass("reveal-sub-menu");
-	$(this).children(".sub-menu").toggleClass("reveal-sub-menu");
 });
 
 // On Scroll
@@ -39,11 +42,7 @@ const myNav = document.querySelector("#main-navigation");
 const toggleMenuWrapper = document.querySelector("#toggle-menu-wrapper");
 const navLogo = document.querySelector("#nav-logo");
 
-const addStickyArray = [
-	myNav,
-	toggleMenuWrapper,
-	navLogo
-];
+const addStickyArray = [myNav, toggleMenuWrapper, navLogo];
 
 const activateAtY = 50;
 
@@ -84,7 +83,6 @@ function removeSticky() {
 	});
 }
 
-
 // Language switcher
 
 // if (languageDropdown) {
@@ -107,5 +105,3 @@ function removeSticky() {
 // 		});
 // 	});
 // }
-
-

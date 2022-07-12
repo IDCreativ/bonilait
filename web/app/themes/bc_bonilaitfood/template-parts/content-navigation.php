@@ -1,5 +1,5 @@
 <?php
-$general_fields = get_fields('options');
+$partners = get_fields('options');
 ?>
 <div id="menu-wrapper-mobile">
     <?php
@@ -10,7 +10,7 @@ $general_fields = get_fields('options');
     ));
     ?>
 </div>
-<div id="toggle-menu-wrapper" class="toggle-wrapper">
+<div class="toggle-wrapper">
     <div id="toggleMenu" class="toggle">
         <span class="line line-1"></span>
         <span class="line line-2"></span>
@@ -19,26 +19,27 @@ $general_fields = get_fields('options');
 </div>
 <nav id="main-navigation">
     <div class="nav-container">
+        <div class="site-branding">
+            <?php the_custom_logo(); ?>
+        </div><!-- .site-branding -->
         <div id="menu-wrapper">
-            <div id="nav-social-wrapper">
-                <?php
-                if (isset($general_fields['reseaux_sociaux']) && !empty($general_fields['reseaux_sociaux'])) {
-                    foreach ($general_fields['reseaux_sociaux'] as $social) {
-                ?>
-                    <a href="<?php echo $social['social_link']['url']; ?>" target="<?php echo $social['social_link']['target']; ?>">
-                        <img class="social-picto" src="<?php echo $social['social_picto']['url']; ?>" alt="<?php echo $social['social_link']['title']; ?>">
-                    </a>
-                <?php
-                    }
-                }
-                ?>
-            </div>
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'menu-1',
                 'menu_id'        => 'primary-menu',
                 'container_class' => 'main-menu-container',
             ));
+            ?>
+        </div>
+        <div class="site-partners">
+            <?php
+                foreach ($partners['partners'] as $partner) {
+                    if ($partner['featured'] ==  true) {
+            ?>
+                <img src="<?php echo $partner['logo']['url']; ?>" alt="" style="max-height: <?php echo $partner['height']; ?>px;">
+            <?php
+                    }
+                }
             ?>
         </div>
     </div>

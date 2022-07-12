@@ -7,26 +7,33 @@
  * @package bc_bonilaitfood
  */
 
+$fields = get_fields();
+if (has_post_thumbnail()) {
+	$featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0];
+} else {
+	$featured_image = get_template_directory_uri() . '/assets/img/default/default-thumb.jpg';
+}
+$page_title = isset($fields['page_title']) && $fields['page_title'] != "" ? $fields['page_title'] : "<p>" . get_the_title() . "</p>";
+$page_description = isset($fields['page_description']) && $fields['page_description'] != "" ? $fields['page_description'] : "";
 ?>
-
+<section id="post-<?php the_ID(); ?>-header" class="page-header">
+	<div class="container">
+		<div class="row">
+			<div class="col heading-container">
+				<h1><?php echo $page_title; ?></h1>
+				<div class="description-header">
+					<?php echo $page_description; ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-overlay"></div>
+	<div class="thumb-bground">
+		<img src="<?php echo $featured_image; ?>" class="post-thumbnail">
+	</div>
+</section><!-- .page-header -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
-	<?php bc_bonilaitfood_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-		the_content();
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bc_bonilaitfood' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
-
-</article><!-- #post-<?php the_ID(); ?> -->
+	<div class="container">
+		<?php the_content(); ?>
+	</div>
+</article>

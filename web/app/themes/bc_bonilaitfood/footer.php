@@ -51,7 +51,7 @@ $general_fields = get_fields('options');
 			<?php
 			if (isset($general_fields['partners'])) {
 				foreach ($general_fields['partners'] as $partner) {
-					if ($partner['hook'] === 'footer') {
+					if ($partner['featured'] === false) {
 			?>
 						<div class="partner">
 							<?php

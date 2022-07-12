@@ -1,0 +1,43 @@
+footer {
+	background-color: white;
+}
+.footer-container {
+	.general-informations {
+		.adresse {
+			h4 {
+				color: $bc-tertiary;
+			}
+			p {
+				color: $bc-tertiary;
+			}
+		}
+	}
+}
+
+ul#footer-menu-left,
+ul#footer-menu-right {
+	li {
+		a {
+			color: $bc-primary;
+			&:hover {
+				color: $bc-secondary;
+			}
+		}
+		&.bc-active {
+			a {
+				color: $bc-primary;
+			}
+		}
+	}
+}
+
+.development_by {
+	color: $bc-tertiary;
+	a {
+		color: $bc-tertiary;
+	}
+}
+
+.copyright {
+	color: $bc-tertiary;
+}

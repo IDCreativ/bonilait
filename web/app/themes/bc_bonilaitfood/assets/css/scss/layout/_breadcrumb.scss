@@ -1,0 +1,32 @@
+#breadcrumbs {
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    padding: 20px 0;
+    background: $bground-grey;
+    margin: 0 0 50px;
+    span {
+        display: flex;
+        align-items: center;
+        a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #000000;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            &:hover {
+                color: $primary;
+                text-decoration: none;
+            }
+        }
+        .breadcrumb_last {
+            margin-left: 10px;
+        }
+        span {
+            a {
+                margin-left: 10px;
+            }
+        }
+    }
+}

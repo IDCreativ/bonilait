@@ -1,0 +1,38 @@
+// Globals
+@import "globals/_variables.scss";
+@import "globals/_snippets.scss";
+@import "globals/_shadows.scss";
+@import "globals/_forms.scss";
+@import "globals/_language-switcher.scss";
+
+// Colors
+@import "colors/_footer.scss";
+
+// Bootstrap
+@import "bootstrap/_bootstrap.scss";
+
+// Layout
+@import "layout/_main.scss";
+@import "layout/_headers.scss";
+@import "layout/_footer.scss";
+@import "layout/_navigation.scss";
+@import "layout/_breadcrumb.scss";
+
+// Pages
+@import "pages/_archives.scss";
+@import "pages/_pages.scss";
+@import "pages/_home.scss";
+@import "pages/_search.scss";
+@import "pages/_partners.scss";
+
+// Éléments
+
+
+// WP Bakery
+@import "wpbakery/_wpbakery.scss";
+@import "wpbakery/_headings.scss";
+@import "wpbakery/_buttons.scss";
+@import "wpbakery/_images.scss";
+
+// Shortcodes
+

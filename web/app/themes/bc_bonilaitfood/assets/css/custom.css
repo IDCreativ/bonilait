@@ -10737,9 +10737,9 @@ section {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: auto;
+  height: 510px;
   width: 100%;
-  padding: 230px 0 100px;
+  padding: 150px 0 0;
   overflow: hidden;
 }
 .page-header .container,
@@ -10753,7 +10753,7 @@ section {
   height: 100%;
 }
 .page-header .heading-container {
-  height: calc(100% - 120px);
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10824,13 +10824,17 @@ section {
 .page-header .header-overlay {
   position: absolute;
   z-index: 1;
-  top: 0;
+  bottom: 0;
   left: 0;
-  height: 100%;
+  height: calc(100% - 150px);
   width: 100%;
-  background: #cf0000 0% 0% no-repeat padding-box;
-  mix-blend-mode: multiply;
-  opacity: 0.6;
+  background: rgba(5, 79, 152, 0.6);
+}
+.page-header .header-overlay img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (min-width: 576px) {

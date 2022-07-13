@@ -27,7 +27,9 @@ $page_description = isset($fields['page_description']) && $fields['page_descript
 			</div>
 		</div>
 	</div>
-	<div class="header-overlay"></div>
+	<div class="header-overlay">
+		<img src="<?php echo get_template_directory_uri() . '/assets/img/backgrounds/wave-bottom-white.svg'; ?>" alt="">
+	</div>
 	<div class="thumb-bground">
 		<img src="<?php echo $featured_image; ?>" class="post-thumbnail">
 	</div>

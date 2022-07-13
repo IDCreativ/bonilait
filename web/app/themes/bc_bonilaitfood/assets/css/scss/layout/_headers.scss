@@ -4,9 +4,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-	height: auto;
+	height: 510px;
 	width: 100%;
-	padding: 230px 0 100px;
+	padding: 150px 0 0;
 	overflow: hidden;
 	.container,
 	.row,
@@ -19,7 +19,8 @@
 		height: 100%;
 	}
 	.heading-container {
-		height: calc(100% - $nav-height);
+		// height: calc(100% - $nav-height);
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -91,13 +92,18 @@
 	.header-overlay {
 		position: absolute;
 		z-index: 1;
-		top: 0;
+		bottom: 0;
 		left: 0;
-		height: 100%;
+		height: calc(100% - 150px);
 		width: 100%;
-		background: $bc-secondary 0% 0% no-repeat padding-box;
-		mix-blend-mode: multiply;
-		opacity: 0.6;
+		background: $bc-primary-opacity;
+		// mix-blend-mode: multiply;
+		// opacity: 0.6;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 }
 

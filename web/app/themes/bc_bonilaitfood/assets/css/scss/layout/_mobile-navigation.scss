@@ -2,18 +2,23 @@
 .toggle-wrapper {
 	position: fixed;
 	z-index: 10002;
-	top: 20px;
-	right: 10px;
-	height: $burger-height;
+	top: 0;
+	right: 0;
+	height: $burger-wrapper-height;
+	width: $burger-wrapper-width;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: $bc-secondary;
 	transition: $transition;
 	#toggleMenu {
-		position: relative;
+		position: absolute;
+		top: 50%;
+		left: 50%;
 		z-index: 1000;
 		width: $burger-width;
 		height: $burger-height;
+		transform: translate(-50%, -50%);
 		cursor: pointer;
 		.line {
 			position: absolute;
@@ -42,7 +47,7 @@
 		}
 		&.active-toggle {
 			.line {
-				background: $bc-secondary;
+				background: $line-active-color;
 			}
 			.line-1 {
 				top: 50%;

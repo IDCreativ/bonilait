@@ -7,9 +7,10 @@
 	justify-content: flex-end;
 	align-items: center;
 	width: 100%;
+	padding: 0 50px 0 0;
 	height: $above-nav-height;
 	background-color: $bc-primary;
-    font-family: $heading-font;
+	font-family: $heading-font;
 	.above-nav-items {
 		display: flex;
 		flex-direction: row;
@@ -26,15 +27,17 @@
 			align-items: center;
 			flex-direction: row;
 			flex-wrap: wrap;
-			gap: 5px;
+			padding: 5px 0;
+			max-height: $above-nav-height;
 			.phone-number,
-            .contact {
+			.contact {
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 				padding: 0 10px;
 				margin: 0;
-				height: $above-nav-height;
+				max-height: 100%;
+				border-right: 1px solid white;
 				img {
 					margin: 0 5px 0 0;
 					width: 12px;
@@ -43,18 +46,67 @@
 				span {
 					display: inline;
 					padding: 0;
-					height: $above-nav-height;
-					line-height: $above-nav-height;
-					font-size: 17px;
+					max-height: 100%;
+					line-height: 20px;
 					font-weight: 300;
-                    text-transform: uppercase;
+					text-transform: uppercase;
 					color: white;
 					vertical-align: middle;
 				}
-                i {
-                    color: white;
-                    font-size: 20px;
-                }
+				i {
+					color: white;
+					font-size: 17px;
+				}
+			}
+		}
+	}
+}
+#above-nav {
+	.phone-number {
+		span {
+			font-size: 15px;
+		}
+	}
+	.contact {
+		span {
+			font-size: 0px;
+		}
+	}
+}
+@media screen and (min-width: 992px) {
+	#above-nav {
+		padding: 0;
+	}
+}
+@media screen and (min-width: 390px) {
+	#above-nav {
+		.above-nav-items {
+			.contact-nav {
+				.contact {
+					padding: 0 15px;
+					span {
+						font-size: 15px;
+					}
+					i {
+						color: white;
+						font-size: 17px;
+					}
+				}
+				.phone-number {
+					padding: 0 15px;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 576px) {
+	#above-nav {
+		.above-nav-items {
+			.contact-nav {
+				.contact,
+				.phone-number {
+					padding: 0 25px;
+				}
 			}
 		}
 	}
@@ -68,20 +120,18 @@
 		align-items: center;
 		height: $above-nav-height;
 		width: 50px;
-		background: white;
 		cursor: pointer;
 		transition: $transition;
 		img {
 			margin: 0;
 			height: 15px;
 			width: 15px;
-			filter: $filter-tertiary;
+			filter: invert(100%);
 			transition: $transition;
 		}
 		&:hover {
-			background: $bc-primary;
 			img {
-				filter: brightness(0) invert(1);
+				filter: invert(1);
 			}
 		}
 	}

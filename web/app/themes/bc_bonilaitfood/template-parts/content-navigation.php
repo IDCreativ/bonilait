@@ -22,13 +22,15 @@ $general_fields = get_fields('options');
 </div>
 <!-- Topbar -->
 <div id="above-nav">
-    <div class="container container-nav p-0">
+    <div class="container above-nav-container p-0">
         <div class="row">
             <div class="col above-nav-items">
                 <div class="contact-nav">
+                    <div id="nav-social-wrapper">
+                        <?php echo do_shortcode('[wpml_language_selector_widget]'); ?>
+                    </div>
                     <div class="phone-number">
-                        <!-- <img src="<?php // echo get_template_directory_uri() ?>/assets/img/phone.svg" alt=""> -->
-                        <span><?php echo $general_fields['general_informations']['telephone']; ?></span>
+                        <span><?php echo isset($general_fields['general_informations']['telephone']) ? $general_fields['general_informations']['telephone'] : ""; ?></span>
                     </div>
                     <div class="contact">
                         <i class="fal fa-envelope"></i>
@@ -58,13 +60,15 @@ $general_fields = get_fields('options');
         </div>
         <div class="site-partners">
             <?php
+            if (isset($general_fields['partners'])) {
                 foreach ($general_fields['partners'] as $partner) {
                     if ($partner['featured'] ==  true) {
             ?>
-                <img src="<?php echo $partner['logo']['url']; ?>" alt="" style="max-height: <?php echo $partner['height']; ?>px;">
+                        <img src="<?php echo $partner['logo']['url']; ?>" alt="" style="max-height: <?php echo $partner['height']; ?>px;">
             <?php
                     }
                 }
+            }
             ?>
         </div>
     </div>

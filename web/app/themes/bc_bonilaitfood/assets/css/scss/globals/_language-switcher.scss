@@ -1,20 +1,23 @@
 #bc-language-switcher {
     position: relative;
+    margin: 0 10px 0 0;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 5px;
-    width: 35px;
-    height: 20px;
+    width: 24px;
+    height: 14px;
     &:after {
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-family: "Font Awesome 5 Pro";
         content: "\f078";
+        position: absolute;
+        top: 50%;
+        right: -15px;
+        display: flex;
+        height: 12px;
+        font-family: "Font Awesome 5 Pro";
         font-size: 12px;
-        line-height: 20px;
+        line-height: 12px;
         color: white;
+        transform: translateY(-50%);
         transition: $transition;
     }
     &.sticky {
@@ -26,7 +29,20 @@
         padding: 0;
         margin: 0;
         list-style: none;
-        height: 20px;
+        height: 14px;
+        li {
+            height: 14px;
+            a {
+                display: flex;
+                height: 14px;
+                img {
+                    height: 14px;
+                    width: 21px;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
         &.ls-sub-menu {
             height: auto;
             display: none;
@@ -40,10 +56,17 @@
             &.ls-sub-menu {
                 display: flex;
                 flex-direction: column;
+                padding: 15px 0 0;
+                row-gap: 15px;
             }
         }
         &:after {
-            transform: rotate(180deg);
+            transform: translateY(-50%) rotate(180deg);
         }
+    }
+}
+@media screen and (min-width: 576px) {
+    #bc-language-switcher {
+        margin: 0 25px 0 0;
     }
 }

@@ -15,8 +15,8 @@ nav {
 			align-items: center;
 			img {
 				&.custom-logo {
-					height: 50px;
-					width: 100px;
+					height: auto;
+					width: $logo-width;
 					object-fit: contain;
 					transition: $transition;
 				}
@@ -24,7 +24,7 @@ nav {
 		}
 		.site-partners {
 			display: flex;
-			flex-direction: row;
+			flex-direction: column-reverse;
 			justify-content: center;
 			align-items: center;
 			flex-wrap: wrap;
@@ -44,13 +44,14 @@ nav {
 			.site-branding {
 				img {
 					&.custom-logo {
-						height: 50px;
+						// height: 50px;
 					}
 				}
 			}
 			.site-partners {
 				height: 60px;
 				justify-content: center;
+				flex-direction: row;
 				flex-wrap: nowrap;
 				gap: 20px;
 			}
@@ -73,8 +74,8 @@ nav {
 			.site-branding {
 				img {
 					&.custom-logo {
-						min-width: 150px;
-						height: 70px;
+						width: $logo-width-992;
+						height: auto;
 					}
 				}
 			}
@@ -93,8 +94,8 @@ nav {
 				margin: 0;
 				img {
 					&.custom-logo {
-						min-width: 150px;
-						height: 75px;
+						min-width: $logo-width-1200;
+						height: auto;
 					}
 				}
 			}
@@ -108,8 +109,8 @@ nav {
 				margin: 0;
 				img {
 					&.custom-logo {
-						min-width: 267px;
-						height: 80px;
+						min-width: $logo-width-1400;
+						height: auto;
 					}
 				}
 			}
@@ -125,7 +126,8 @@ nav {
 		&#main-navigation {
 			.site-partners {
 				img {
-					max-height: 30px !important;
+					max-height: 50px !important;
+					max-width: 80px !important;
 				}
 			}
 		}
@@ -136,20 +138,27 @@ nav {
 	position: relative;
 	z-index: 999;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-direction: row;
+	justify-content: space-around;
 	align-items: center;
 	margin: 0 auto;
 	padding: 10px;
 	max-width: 100%;
 	min-height: $nav-height;
 }
+.above-nav-container {
+	max-width: 100%;
+}
+@media screen and (min-width: 576px) {
+	.nav-container {
+		justify-content: space-around;
+		padding: 0;
+	}
+}
 @media screen and (min-width: 992px) {
 	.nav-container {
 		justify-content: space-between;
-		flex-direction: row;
-		max-width: 960px;
-		padding: 0 60px 0 0;
+		padding: 0;
 	}
 }
 @media screen and (min-width: 1200px) {
@@ -159,7 +168,8 @@ nav {
 	}
 }
 @media screen and (min-width: 1400px) {
-	.nav-container {
+	.nav-container,
+	.above-nav-container {
 		max-width: 1340px;
 		padding: 0;
 	}
@@ -173,7 +183,7 @@ nav {
 ul#primary-menu {
 	display: none;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
 	ul#primary-menu {
 		list-style: none;
 		margin: 0 auto;
@@ -184,14 +194,14 @@ ul#primary-menu {
 		justify-content: center;
 		li {
 			position: relative;
-			margin: 0 25px;
+			margin: 0 10px;
 			padding: 0;
 			a {
 				font-family: $heading-font;
-				font-size: 16px;
+				font-size: 15px;
 				line-height: 20px;
 				letter-spacing: 0;
-				font-weight: 500;
+				font-weight: 400;
 				color: $bc-primary;
 				padding: 0;
 				display: inline-block;
@@ -319,29 +329,14 @@ ul#primary-menu {
 		}
 	}
 }
-
-#social-wrapper {
-	position: fixed;
-	z-index: 1002;
-	top: 12px;
-	left: 10px;
-	display: flex;
-	align-items: flex-start;
-	gap: 10px;
-	img {
-		position: relative;
-		height: 16px;
-		width: 16px;
-		&.social-picto {
-			filter: invert(100%);
-			transition: $transition;
-			&.sticky {
-				display: inline-block;
-				filter: $filter-primary;
+@media screen and (min-width: 1200px) {
+	ul#primary-menu {
+		li {
+			margin: 0 20px;
+			a {
+				font-size: 15px;
+				line-height: 20px;
 			}
-		}
-		&.fr-flag {
-			// margin: 0 0 0 10px;
 		}
 	}
 }

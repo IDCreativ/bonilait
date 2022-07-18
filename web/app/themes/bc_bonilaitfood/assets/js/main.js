@@ -33,8 +33,8 @@ searchToggle.addEventListener("click", function () {
 });
 
 // Language switcher const
-// const languageToggles = document.querySelectorAll('.js-language-toggle');
-// const languageDropdown = document.querySelector('#bc-language-switcher');
+const languageToggles = document.querySelectorAll('.js-language-toggle');
+const languageDropdown = document.querySelector('#bc-language-switcher');
 
 function toggleDropdownNav() {
 	toggleMenu.classList.toggle("active-toggle");
@@ -101,23 +101,23 @@ function removeSticky() {
 
 // Language switcher
 
-// if (languageDropdown) {
-// 	languageDropdown.addEventListener('click', function(e) {
-// 		console.log('Clic sur un le switcher');
-// 		if (languageDropdown.classList.contains('langOpened')) {
-// 			languageDropdown.classList.remove('langOpened');
-// 		} else {
-// 			languageDropdown.classList.add('langOpened');
-// 		}
-// 	});
-// }
+if (languageDropdown) {
+	languageDropdown.addEventListener('click', function(e) {
+		console.log('Clic sur un le switcher');
+		if (languageDropdown.classList.contains('langOpened')) {
+			languageDropdown.classList.remove('langOpened');
+		} else {
+			languageDropdown.classList.add('langOpened');
+		}
+	});
+}
 
-// if (languageToggles) {
-// 	languageToggles.forEach(function(toggle) {
-// 		toggle.addEventListener('click', function(e) {
-// 			console.log('Clic sur un drapeau');
-// 			// e.preventDefault();
-// 			languageDropdown.classList.remove('langOpened');
-// 		});
-// 	});
-// }
+if (languageToggles) {
+	languageToggles.forEach(function(toggle) {
+		toggle.addEventListener('click', function(e) {
+			console.log('Clic sur un drapeau');
+			// e.preventDefault();
+			languageDropdown.classList.remove('langOpened');
+		});
+	});
+}

@@ -55,14 +55,16 @@ $secondary: $bc-secondary;
 
 
 // Burger Animation Vars
-$line-color: black;
-$line-color-sticky: $bc-secondary;
+$line-color: white;
+$line-color-sticky: white;
 $line-hover-color: $line-color;
-$line-active-color: $bc-secondary;
+$line-active-color: white;
 $line-width: 20px;
-$line-thickness: 1px;
+$line-thickness: 2px;
 $rotation: 45deg;
-$burger-height: 12px;
+$burger-height: 14px;
+$burger-wrapper-height: 30px;
+$burger-wrapper-width: 50px;
 $burger-width: $line-width;
 
 @media screen and (min-width: 576px) {

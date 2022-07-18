@@ -16,6 +16,22 @@ const dropdownNav = document.getElementById("menu-wrapper-mobile");
 const menuLinks = document.querySelectorAll(".menu-item");
 const socialPictos = document.querySelectorAll(".social-picto");
 
+// Search form
+const searchToggle = document.getElementById("show-searchform");
+const searchForm = document.getElementById("search-form");
+
+// Search Form
+searchToggle.addEventListener("click", function () {
+	console.log('Clic sur la loupe');
+	if (!searchForm.classList.contains("show-search")) {
+		gsap.to(searchForm, { duration: 0.3, ease: "power1.out", right: 0 });
+		searchForm.classList.add("show-search");
+	} else {
+		gsap.to(searchForm, { duration: 0.3, ease: "power1.out", right: "-200%" });
+		searchForm.classList.remove("show-search");
+	}
+});
+
 // Language switcher const
 // const languageToggles = document.querySelectorAll('.js-language-toggle');
 // const languageDropdown = document.querySelector('#bc-language-switcher');

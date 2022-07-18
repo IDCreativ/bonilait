@@ -3,9 +3,9 @@ nav {
 		padding: 0 5px;
 		position: fixed;
 		z-index: 899;
-		top: 0;
+		top: 30px;
 		width: 100%;
-		min-height: 150px;
+		min-height: $nav-height;
 		background: white;
 		border-bottom: 1px solid $bc-primary;
 		.site-branding {
@@ -41,7 +41,6 @@ nav {
 @media screen and (min-width: 576px) {
 	nav {
 		&#main-navigation {
-			height: 150px;
 			.site-branding {
 				img {
 					&.custom-logo {
@@ -143,7 +142,7 @@ nav {
 	margin: 0 auto;
 	padding: 10px;
 	max-width: 100%;
-	min-height: 150px;
+	min-height: $nav-height;
 }
 @media screen and (min-width: 992px) {
 	.nav-container {

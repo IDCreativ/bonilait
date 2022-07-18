@@ -6,7 +6,7 @@
 	align-items: flex-start;
 	height: 510px;
 	width: 100%;
-	padding: 150px 0 0;
+	padding: calc($nav-height + $above-nav-height) 0 0;
 	overflow: hidden;
 	.container,
 	.row,
@@ -94,7 +94,7 @@
 		z-index: 1;
 		bottom: 0;
 		left: 0;
-		height: calc(100% - 150px);
+		height: calc(100% - $nav-height + $above-nav-height);
 		width: 100%;
 		background: $bc-primary-opacity;
 		// mix-blend-mode: multiply;

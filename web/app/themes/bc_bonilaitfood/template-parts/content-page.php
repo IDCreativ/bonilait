@@ -21,6 +21,9 @@ $page_description = isset($fields['page_description']) && $fields['page_descript
 		<div class="row">
 			<div class="col heading-container">
 				<h1><?php echo $page_title; ?></h1>
+				<div class="picto-header">
+					<img src="<?php echo get_template_directory_uri() . '/assets/img/h1-wave.svg'; ?>" alt="">
+				</div>
 				<div class="description-header">
 					<?php echo $page_description; ?>
 				</div>

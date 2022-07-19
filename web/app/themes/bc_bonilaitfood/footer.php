@@ -57,8 +57,8 @@ $general_fields = get_fields('options');
 							<?php
                             if (isset($partner['link'])) {
 							?>
-							<a href="<?php echo $partner['link']['url']; ?>" target="<?php echo $partner['link']['target']; ?>" title="<?php echo $partner['link']['title']; ?>">
-								<img src="<?php echo $partner['logo']['url']; ?>" alt="<?php echo $partner['name']; ?>" style="height: <?php echo $partner['height']; ?>px;">
+							<a href="<?php echo isset($partner['link']['url']) ? $partner['link']['url'] : ""; ?>" target="<?php echo isset($partner['link']['target']) ? $partner['link']['target'] : ""; ?>" title="<?php echo isset($partner['link']['title']) ? $partner['link']['title'] : ""; ?>">
+								<img src="<?php echo $partner['logo']['url']; ?>" alt="<?php echo $partner['logo']['title']; ?>" style="height: <?php echo $partner['height']; ?>px;">
 							</a>
 							<?php
                             }

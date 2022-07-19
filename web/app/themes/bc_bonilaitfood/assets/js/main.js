@@ -55,12 +55,10 @@ toggleMenu.addEventListener("click", function () {
 
 // On Scroll
 const myNav = document.querySelector("#main-navigation");
-const toggleMenuWrapper = document.querySelector("#toggle-menu-wrapper");
-const navLogo = document.querySelector("#nav-logo");
 
-const addStickyArray = [myNav, toggleMenuWrapper, navLogo];
+const addStickyArray = [myNav];
 
-const activateAtY = 50;
+var activateAtY = 50;
 
 function checkOnScroll() {
 	if (

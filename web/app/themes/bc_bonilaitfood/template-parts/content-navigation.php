@@ -38,7 +38,7 @@ $general_fields = get_fields('options');
                     </div>
                 </div>
                 <div id="show-searchform" class="toggle-search search-nav">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/search.svg" alt="">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . "/assets/img/search.svg"); ?>" alt="">
                 </div>
             </div>
         </div>

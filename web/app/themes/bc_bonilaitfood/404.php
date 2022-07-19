@@ -21,10 +21,10 @@ get_header();
 		<div class="row">
 			<div class="col">
 				<div class="above-title-search">
-					<?php esc_html_e('Erreur 404', 'cbfroid'); ?>
+					<?php esc_html_e('Erreur 404', 'bc_bonilaitfood'); ?>
 				</div>
 				<div class="title-search">
-					<?php esc_html_e('Oups ! Cette page est introuvable.', 'cbfroid'); ?>
+					<?php esc_html_e('Oups ! Cette page est introuvable.', 'bc_bonilaitfood'); ?>
 				</div>
 			</div>
 		</div>
@@ -37,7 +37,7 @@ get_header();
 		</div>
 		<div class="row">
 			<div class="col">
-				<div class="cbfroid-buttons "><a href="<?php echo the_permalink($post->ID); ?>"><button class="cbfroid-buttons btn btn-white rounded-pill"><i class="fal fa-long-arrow-left left"></i>Retour à l'accueil</button></a></div>
+				<div class="bc_bonilaitfood-buttons "><a href="<?php echo the_permalink($post->ID); ?>"><button class="bc_bonilaitfood-buttons btn btn-white rounded-pill"><i class="fal fa-long-arrow-left left"></i>Retour à l'accueil</button></a></div>
 			</div>
 		</div>
 	</div>

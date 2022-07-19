@@ -27,7 +27,7 @@ $general_fields = get_fields('options');
 					© <?php bloginfo('name'); ?>
 				</div>
 				<div class="development_by">
-					<a href="https://www.blue-com.fr/" target="_blank" title="Agence de communication éco-responsable"><span>Site réalisé par </span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-blue-com.svg"></a>
+					<a href="https://www.blue-com.fr/" target="_blank" title="Agence de communication éco-responsable"><span>Site réalisé par </span><img src="<?php echo esc_url(get_template_directory_uri() . "/assets/img/logo-blue-com.svg"); ?>"></a>
 				</div>
 			</div>
 		</div>
@@ -78,7 +78,7 @@ $general_fields = get_fields('options');
 	</div>
 
 </footer>
-
+<?php wp_footer(); ?>
 </body>
 
 </html>

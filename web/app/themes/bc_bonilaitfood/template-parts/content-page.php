@@ -22,7 +22,7 @@ $page_description = isset($fields['page_description']) && $fields['page_descript
 			<div class="col heading-container">
 				<h1><?php echo $page_title; ?></h1>
 				<div class="picto-header">
-					<img src="<?php echo get_template_directory_uri() . '/assets/img/h1-wave.svg'; ?>" alt="">
+					<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/h1-wave.svg'); ?>" alt="">
 				</div>
 				<div class="description-header">
 					<?php echo $page_description; ?>
@@ -31,7 +31,7 @@ $page_description = isset($fields['page_description']) && $fields['page_descript
 		</div>
 	</div>
 	<div class="header-overlay">
-		<img src="<?php echo get_template_directory_uri() . '/assets/img/backgrounds/wave-bottom-white.svg'; ?>" alt="">
+		<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/backgrounds/wave-bottom-white.svg'); ?>" alt="">
 	</div>
 	<div class="thumb-bground">
 		<img src="<?php echo $featured_image; ?>" class="post-thumbnail">

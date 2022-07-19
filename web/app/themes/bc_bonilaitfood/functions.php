@@ -235,4 +235,4 @@ function mind_defer_scripts($tag, $handle, $src)
 }
 add_filter('script_loader_tag', 'mind_defer_scripts', 10, 3);
 
-add_image_size('dstcyr-card', 400, 400, false);
+// add_image_size('dstcyr-card', 400, 400, false);

@@ -213,14 +213,6 @@ if (function_exists('acf_add_options_page')) {
 	));
 }
 
-// WP Bakery includes
-// include('wpbakery/headings.php');
-// include('wpbakery/buttons.php');
-// include('wpbakery/custom_image.php');
-// include('wpbakery/vc_column.php');
-// include('wpbakery/vc_row.php');
-
-
 // Defer javascript files
 function mind_defer_scripts($tag, $handle, $src)
 {
@@ -235,4 +227,15 @@ function mind_defer_scripts($tag, $handle, $src)
 }
 add_filter('script_loader_tag', 'mind_defer_scripts', 10, 3);
 
-// add_image_size('dstcyr-card', 400, 400, false);
+add_filter('nav_menu_css_class', 'special_nav_class', 10, 2);
+
+function special_nav_class($classes, $item)
+{
+	if (in_array('current-menu-item', $classes)) {
+		$classes[] = 'bc-active ';
+	}
+	return $classes;
+}
+
+// Shortcodes
+include('shortcodes/shortcode-products.php');     // Shortcodes

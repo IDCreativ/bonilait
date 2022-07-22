@@ -12,7 +12,41 @@
 
 
 $general_fields = get_fields('options');
+$fields = get_fields();
+if (isset($fields['page_footer']['footer_type'])) {
+	get_template_part('template-parts/footer/' . $fields['page_footer']['footer_type']);
+}
 ?>
+<div class="content-top-footer">
+<?php
+if (isset($fields['page_footer']) && $fields['page_footer']['footer_image']) {
+?>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h3 class="footer-title">
+					<?php echo(isset($fields['page_footer']['footer_title']) && $fields['page_footer']['footer_title'] != "" ? $fields['page_footer']['footer_title'] : ""); ?>
+				</h3>
+			</div>
+		</div>
+		<div class="row swap-on-mobile">
+			<div class="col-12 col-lg-6 col-xl-9">
+				<div class="footer-content">
+					<?php echo(isset($fields['page_footer']['footer_content']) && $fields['page_footer']['footer_content'] != "" ? $fields['page_footer']['footer_content'] : ""); ?>
+				</div>
+			</div>
+			<div class="col-12 col-lg-6 col-xl-3 margin-lg-0b margin-sm-50b margin-lg-0t margin-sm-50t">
+				<div class="footer-illustration">
+					<img src="<?php echo(isset($fields['page_footer']['footer_image']) && $fields['page_footer']['footer_image'] != "" ? $fields['page_footer']['footer_image']['url'] : ""); ?>" alt="<?php echo(isset($fields['page_footer']['footer_image']) && $fields['page_footer']['footer_image'] != "" ? $fields['page_footer']['footer_image']['title'] : ""); ?>">
+				</div>
+			</div>
+		</div>
+	</div>
+
+<?php
+}
+?>
+</div>
 <footer>
 	<div class="footer-container">
 		<div class="site-branding">

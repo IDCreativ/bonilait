@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template part for displaying page content in page.php
  *
@@ -7,14 +6,15 @@
  *
  * @package bc_bonilaitfood
  */
+
 $fields = get_fields();
 if (has_post_thumbnail()) {
 	$featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0];
 } else {
 	$featured_image = get_template_directory_uri() . '/assets/img/default/default-thumb.jpg';
 }
-$page_title = isset($fields['page_header']['page_title']) && $fields['page_header']['page_title'] != "" ? $fields['page_header']['page_title'] : "<p>" . get_the_title() . "</p>";
-$page_description = isset($fields['page_header']['page_description']) && $fields['page_header']['page_description'] != "" ? $fields['page_header']['page_description'] : "";
+$page_title = isset($fields['page_title']) && $fields['page_title'] != "" ? $fields['page_title'] : "<p>" . get_the_title() . "</p>";
+$page_description = isset($fields['page_description']) && $fields['page_description'] != "" ? $fields['page_description'] : "";
 ?>
 <section id="post-<?php the_ID(); ?>-header" class="page-header">
 	<div class="container">

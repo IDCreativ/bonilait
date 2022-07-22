@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 248 247" style="enable-background:new 0 0 248 247;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#A8968D;}
+	.st1{fill:#FFFFFF;}
+	.st2{font-family:'Oswald-Light';}
+	.st3{font-size:25px;}
+	.st4{font-family:'Oswald-Bold';}
+	.st5{fill:none;stroke:#A8968D;}
+</style>
+<g id="Groupe_83" transform="translate(-662 -1637)">
+	<g id="Ellipse_6" transform="translate(675 1649)">
+		<ellipse id="cercle-interne" class="st0" cx="111" cy="111.5" rx="111" ry="111.5"/>
+	</g>
+	<text transform="matrix(1 0 0 1 720.2137 1760.5001)" class="st1 st2 st3">NOS</text>
+	<text transform="matrix(1 0 0 1 757.8381 1760.5001)" class="st1 st4 st3"> GAMMES</text>
+	<g id="Ellipse_7" transform="translate(662 1637)">
+		<ellipse id="cercle-externe" class="st5" cx="124" cy="123.5" rx="123.5" ry="123"/>
+	</g>
+	<path id="vague" class="st1" d="M836.6,1777.3c-0.8,0.6-1.7,1.2-2.6,1.7c-0.9,0.5-1.9,1-2.8,1.4c-2,0.9-4,1.5-6.1,2
+		c-4.2,1-8.5,1.6-12.8,1.7c-2.1,0.1-4.3,0.1-6.4,0.1c-2.1,0-4.3-0.1-6.4-0.2s-4.2-0.3-6.4-0.5c-2.1-0.2-4.2-0.4-6.3-0.6
+		c-8.4-0.9-16.7-2-25-2.7c-4.2-0.4-8.3-0.5-12.5-0.4c-2.1,0-4.2,0.2-6.2,0.4c-1,0.1-2.1,0.3-3.1,0.5c-1,0.2-1.6,0.4-2.6,0.7
+		c0.8-0.5,1.6-0.9,2.4-1.2c1-0.4,2-0.7,3-0.9c2.1-0.5,4.2-1,6.3-1.2c4.2-0.5,8.5-0.8,12.8-0.7c8.5,0.1,17,1,25.3,1.9
+		c2.1,0.2,4.2,0.4,6.3,0.7c2.1,0.2,4.2,0.4,6.2,0.6c4.2,0.4,8.3,0.7,12.5,0.8c4.1,0.1,8.3,0,12.4-0.5c2-0.3,4.1-0.7,6.1-1.2
+		c1-0.3,2-0.6,3-1C834.7,1778.2,835.6,1777.8,836.6,1777.3"/>
+</g>
+</svg>

@@ -1,0 +1,129 @@
+.home-gammes {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    min-height: 980px;
+    margin: 0 auto;
+    background: url('../img/backgrounds/bg-home-gammes.jpg') no-repeat center center;
+    // background-size: auto;
+}
+
+.bg-home-schema  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+.bg-1 {
+    z-index: 1;
+    height: 700px;
+    width: 700px;
+}
+.bg-2 {
+    z-index: 2;
+    height: 415px;
+    width: 415px;
+}
+.bg-3 {
+    z-index: 3;
+    height: 250px;
+    width: 250px;
+}
+
+.gammes-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    height: 415px;
+    width: 415px;
+}
+
+.gamme-wrapper {
+    position: absolute;
+    &.wrapper-column {
+        flex-direction: column;
+        .gamme-description {
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100%);
+            text-align: center;
+        }
+    }
+    &.wrapper-column-reverse {
+        flex-direction: column-reverse;
+        .gamme-description {
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100%);
+            text-align: center;
+        }
+    }
+    &.wrapper-row {
+        flex-direction: row;
+        .gamme-description {
+            left: -30px;
+            transform: translateX(-100%);
+            text-align: right;
+        }
+    }
+    &.wrapper-row-reverse {
+        flex-direction: row-reverse;
+        .gamme-description {
+            right: -30px;
+            transform: translateX(100%);
+            text-align: left;
+        }
+    }
+    &.top-center {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    &.center-right {
+        top: 50%;
+        right: 0;
+        transform: translateX(50%) translateY(-50%);
+    }
+    &.bottom-center {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(50%);
+    }
+    &.center-left {
+        top: 50%;
+        left: 0;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .gamme-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        height: 50px;
+        padding: 10px 20px;
+        font-family: $heading-font;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $bc-secondary;
+        background: white;
+        border: 1px solid $bc-primary;
+        border-radius: $bc-radius-small;
+    }
+    .gamme-description {
+        position: absolute;
+        width: 300px;
+        p {
+            margin: 0;
+        }
+    }
+}

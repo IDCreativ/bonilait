@@ -41,13 +41,6 @@ nav {
 @media screen and (min-width: 576px) {
 	nav {
 		&#main-navigation {
-			.site-branding {
-				img {
-					&.custom-logo {
-						// height: 50px;
-					}
-				}
-			}
 			.site-partners {
 				height: 60px;
 				justify-content: center;
@@ -163,7 +156,6 @@ nav {
 }
 @media screen and (min-width: 1200px) {
 	.nav-container {
-		// max-width: 1140px;
 		padding: 0;
 	}
 }
@@ -209,49 +201,29 @@ ul#primary-menu {
 				text-transform: uppercase;
 				transition: $transition;
 				&.active {
-					&:before {
-						content: "";
-						position: absolute;
-						bottom: -10px;
-						left: 0;
-						width: 75%;
-						height: 1px;
-						background: $bc-secondary;
-						transform-origin: left;
-						transition: $transition;
-					}
 					&:after {
 						content: "";
 						position: absolute;
 						bottom: -20px;
-						right: 0;
+						left: 50%;
 						width: 75%;
 						height: 1px;
 						background: $bc-secondary;
-						transform-origin: right;
+						transform: translateX(-50%);
+						transform-origin: center;
 						transition: $transition;
 					}
-				}
-				&:before {
-					content: "";
-					position: absolute;
-					bottom: -10px;
-					left: 0;
-					width: 0;
-					height: 1px;
-					background: $bc-secondary;
-					transform-origin: left;
-					transition: $transition;
 				}
 				&:after {
 					content: "";
 					position: absolute;
 					bottom: -20px;
-					right: 0;
+					left: 50%;
 					width: 0;
 					height: 1px;
 					background: $bc-secondary;
-					transform-origin: right;
+					transform: translateX(-50%);
+					transform-origin: center;
 					transition: $transition;
 				}
 				&:hover {
@@ -267,33 +239,19 @@ ul#primary-menu {
 				&:hover {
 					color: $bc-secondary;
 					transition: $transition;
-					&:before {
-						content: "";
-						position: absolute;
-						bottom: -10px;
-						left: 0;
-						width: 0;
-						height: 1px;
-						background: $bc-secondary;
-						transform-origin: left;
-						transition: $transition;
-					}
 					&:after {
 						content: "";
 						position: absolute;
 						bottom: -20px;
-						right: 0;
+						left: 50%;
 						width: 0;
 						height: 1px;
 						background: $bc-secondary;
-						transform-origin: right;
+						transform: translateX(-50%);
+						transform-origin: center;
 						transition: $transition;
 					}
 					&:hover {
-						&:before {
-							width: 75%;
-							transition: $transition;
-						}
 						&:after {
 							width: 75%;
 							transition: $transition;
@@ -303,26 +261,16 @@ ul#primary-menu {
 			}
 
 			&.bc-active {
-				&:before {
-					content: "";
-					position: absolute;
-					bottom: -10px;
-					left: 0;
-					width: 75%;
-					height: 1px;
-					background: $bc-secondary;
-					transform-origin: left;
-					transition: $transition;
-				}
 				&:after {
 					content: "";
 					position: absolute;
 					bottom: -20px;
-					right: 0;
+					left: 50%;
 					width: 75%;
 					height: 1px;
 					background: $bc-secondary;
-					transform-origin: right;
+					transform: translateX(-50%);
+					transform-origin: center;
 					transition: $transition;
 				}
 			}

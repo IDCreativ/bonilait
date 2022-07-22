@@ -15,6 +15,7 @@
 // Layout
 @import "layout/_main.scss";
 @import "layout/_headers.scss";
+@import "layout/_headers-home.scss";
 @import "layout/_footer.scss";
 @import "layout/_navigation.scss";
 @import "layout/_topbar.scss";
@@ -30,12 +31,9 @@
 
 // Éléments
 @import "elements/_home-cards.scss";
-
-// WP Bakery
-@import "wpbakery/_wpbakery.scss";
-@import "wpbakery/_headings.scss";
-@import "wpbakery/_buttons.scss";
-@import "wpbakery/_images.scss";
+@import "elements/_special-image.scss";
+@import "elements/_special-content.scss";
 
 // Shortcodes
+@import "shortcodes/_products.scss";
 

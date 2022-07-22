@@ -1,0 +1,20 @@
+.special-content {
+	padding: 0;
+	@media screen and (min-width: 992px) {
+		padding: 0 0 0 40px;
+	}
+	@media screen and (min-width: 1200px) {
+		padding: 0 0 0 80px;
+	}
+	.special-title {
+		font-size: 25px;
+		line-height: 40px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: $bc-secondary;
+	}
+	p {
+		font-size: 16px;
+		line-height: 22px;
+	}
+}

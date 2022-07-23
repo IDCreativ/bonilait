@@ -239,3 +239,4 @@ function special_nav_class($classes, $item)
 
 // Shortcodes
 include('shortcodes/shortcode-products.php');     // Shortcodes
+include('shortcodes/shortcode-articles.php');     // Shortcodes
